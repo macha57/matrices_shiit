@@ -9,8 +9,9 @@ Author => <pratimsina@gmail.com>
 		--> Implemented input of 2x2 matrix giving user controls over their inputs 
 		--> Minor bug fixes
 ----------------------------------------------------------------------------------------
-	Whats Next ?>
-		1. Calculation of any dimention matrix. 
+	V.2.0 (BETA) => Whats New>
+		--> Calculation of inverse matrix.
+		*NOTE: Since this is a beta version it may have some bugs* 
 ===================================================================================================================
 
 
