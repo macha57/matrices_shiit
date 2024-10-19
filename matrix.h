@@ -77,9 +77,10 @@ int determinant_of_matrix(int row,int column)
 	
 
 }
-void calculate_cofactor_of_matrices(int matrixs[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_COLS_ACCEPTED])
+
+void calculate_cofactor_of_matrices(int matrixs[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_COLS_ACCEPTED],int cofactor[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_COLS_ACCEPTED])
 {
-	int cofactor[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_COLS_ACCEPTED];	
+		
 	cofactor[0][0] = matrixs[1][1];
 	cofactor[0][1] = - matrixs[1][0];
 	cofactor[1][0]= - matrixs[0][1];
@@ -98,11 +99,12 @@ void calculate_cofactor_of_matrices(int matrixs[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_C
 int calculate_inverse_of_matrices(int r, int c)
 {
 	int matrix[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_COLS_ACCEPTED];
+	int cofactor[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_COLS_ACCEPTED];
 	input_row_column_in_array(r,c,matrix);
 	
 	int determinant_matrix = (matrix[1][1] * matrix[0][0]) - (matrix[1][0] * matrix[0][1]);
 	printf("%d is the determinant\n",determinant_matrix );
-	calculate_cofactor_of_matrices(matrix);
+	calculate_cofactor_of_matrices(matrix,cofactor);
 	float inverse_matrix[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_COLS_ACCEPTED];
 
 	float formula = 1.0/determinant_matrix;
@@ -110,7 +112,7 @@ int calculate_inverse_of_matrices(int r, int c)
 	{
 		for(int j = 0 ; j <2; j++)
 		{
-			inverse_matrix[i][j] = formula*matrix[i][j];
+			inverse_matrix[i][j] = formula*(cofactor[i][j]);
 		}
 	}
 	for(int i = 0; i < 2; i++)
@@ -121,8 +123,6 @@ int calculate_inverse_of_matrices(int r, int c)
 		}
 		printf("\n");
 	}
-
-	
 }
 int calculate_derivative_of_matrices(int x)
 {
