@@ -123,15 +123,6 @@ int calculate_inverse_of_matrices(int r, int c)
 	}
 
 	
-
-	for(int i = 0 ; i < 2; i++)
-	{
-		for(int j = 0; j < 2; j++)
-		{
-			int god_knows_what = (formula)*inverse_matrix[i][j];
-		}
-	}
-	
 }
 int calculate_derivative_of_matrices(int x)
 {
