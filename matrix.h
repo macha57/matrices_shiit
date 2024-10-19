@@ -24,8 +24,8 @@ more efficient and even making it calculate 3x3 or higher dimensional matrix :)
 
 #include <stdio.h>
 
-#define MAXIMUM_ROWS_ACCEPTED 100
-#define MAXIMUM_COLS_ACCEPTED 100
+#define MAXIMUM_ROWS_ACCEPTED 2
+#define MAXIMUM_COLS_ACCEPTED 2
 
 void input_row_column_in_array(int rows, int columns, int matrices[MAXIMUM_ROWS_ACCEPTED][MAXIMUM_COLS_ACCEPTED])
 {
